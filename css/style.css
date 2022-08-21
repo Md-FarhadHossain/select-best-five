@@ -12,10 +12,25 @@ font-family: 'Manrope', sans-serif; */
 body {
   font-family: "Manrope", sans-serif;
 }
+ul {
+  list-style: none;
+}
 img {
   width: 100%;
 }
-
+input {
+  color: #fff;
+}
+button.btn {
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  background: #015196;
+  color: #fff;
+  padding: 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
 .container {
   width: 100%;
   padding: 0 1rem;
@@ -48,11 +63,6 @@ img {
 }
 /* Hero senction end */
 
-
-
-
-
-
 /* Player section */
 main {
   background-color: #151515;
@@ -66,15 +76,107 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 1.5rem;
 }
 .calculations {
   width: 25%;
+  padding-left: 1rem;
 }
 .player {
+  text-align: center;
   width: 22rem;
-  border: 1px solid #ddd;
+  border: 1px solid #434343;
   flex-grow: 1;
-  margin: .3rem;
-  background-color: #0D0D0D;
+  background-color: #0d0d0d;
+  padding: 1rem;
+}
+.player h1 {
+  color: #fff;
+  font-weight: 500;
+}
+
+.player p {
+  color: #b3b3b3;
+  margin: 1rem;
+}
+.player-num {
+  font-weight: 500;
+}
+.player-num span {
+  font-weight: bold;
+
+  color: #888;
+
+  font-size: 1.3rem;
+
+  margin-right: 1.2rem;
 }
 /* Player section end */
+
+/* Calculate section */
+.selected-player > div {
+  padding: 1rem 2rem;
+}
+.selected-player {
+  background: #0d0d0d;
+  color: #fff;
+  border: 1px solid #434343;
+}
+
+.selected-player h1 {
+  font-weight: 500;
+  text-align: center;
+}
+.selected-player {
+  background: #0d0d0d;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.selected-player h1 {
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.budget {
+  background: #0d0d0d;
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  border: 1px solid #434343;
+}
+
+.budget h1 {
+  font-weight: 500;
+  text-align: center;
+}
+
+.budget > div {
+  padding: 1rem 2rem;
+  display: grid;
+  gap: 1rem;
+}
+.calculate-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+input#perPlayer,
+#manager,
+#coach {
+  padding: 1rem;
+  border: 1px solid #fff;
+  background: none;
+  width: 9rem;
+}
+.player-expenses,
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+/* Calculate section end */
