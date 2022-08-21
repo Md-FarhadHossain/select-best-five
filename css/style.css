@@ -1,0 +1,15 @@
+/* font-family: 'Berkshire Swash', cursive;
+font-family: 'Manrope', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@400;500;600;700&display=swap");
+
+/* Default Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: red;
+}
