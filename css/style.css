@@ -14,36 +14,36 @@ body {
 }
 
 .container {
-    width: 100%;
-    padding: 0 1rem;
-    margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
 }
 /* Hero senction */
 #hero {
-    background-image: url(../img/hero-image.avif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 70vh;
+  background-image: url(../img/hero-image.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
 }
 .container {
-    width: 960px;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 1rem;
+  width: 960px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 .hero-content {
-    text-align: center;
+  text-align: center;
 }
 .hero-content h1 {
-    font-family: 'Berkshire Swash', cursive;
-    font-size: 3rem;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 3rem;
 }
 .hero-content p {
-    font-weight: 600;
+  font-weight: 600;
 }
 /* Hero senction end */
