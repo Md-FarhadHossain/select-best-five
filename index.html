@@ -38,9 +38,9 @@
                 <img src="./img/player-1.jpg" alt="player" />
               </div>
               <div class="player-info">
-                <h1>Lionel Messi</h1>
+                <h1 class="playerName-1">Lionel Messi</h1>
                 <p>Argentina | Classic Players</p>
-                <button class="btn">Select</button>
+                <button class="btn slectedButton selectBtn-1">Select</button>
               </div>
             </div>
 
@@ -50,9 +50,9 @@
                 <img src="./img/player-2.jpg" alt="player" />
               </div>
               <div class="player-info">
-                <h1>David Villa</h1>
+                <h1 class="playerName-2">David Villa</h1>
                 <p>Spain | Classic Players</p>
-                <button class="btn">Select</button>
+                <button class="btn slectedButton selectBtn-2">Select</button>
               </div>
             </div>
 
@@ -62,9 +62,9 @@
                 <img src="./img/player-3.jpg" alt="player" />
               </div>
               <div class="player-info">
-                <h1>Fara Williams</h1>
+                <h1 class="playerName-3">Fara Williams</h1>
                 <p>England | Classic Players</p>
-                <button class="btn">Select</button>
+                <button class="btn slectedButton selectBtn-3">Select</button>
               </div>
             </div>
 
@@ -74,9 +74,9 @@
                 <img src="./img/player-4.jpg" alt="player" />
               </div>
               <div class="player-info">
-                <h1>Miroslav Klose</h1>
+                <h1 class="playerName-4">Miroslav Klose</h1>
                 <p>Germany | Classic Players</p>
-                <button class="btn">Select</button>
+                <button class="btn slectedButton selectBtn-4">Select</button>
               </div>
             </div>
 
@@ -86,9 +86,10 @@
                 <img src="./img/player-5.jpg" alt="player" />
               </div>
               <div class="player-info">
-                <h1>Nadine Angerer</h1>
+                <h1 class="playerName-5">Nadine Angerer</h1>
                 <p>Germany | Classic Players</p>
-                <button class="btn">Select</button>
+
+                <button class="btn slectedButton selectBtn-5">Select</button>
               </div>
             </div>
 
@@ -98,9 +99,9 @@
                 <img src="./img/player-6.jpg" alt="player" />
               </div>
               <div class="player-info">
-                <h1>Hope Solo</h1>
+                <h1 class="playerName-6">Hope Solo</h1>
                 <p>USA | Classic Players</p>
-                <button class="btn">Select</button>
+                <button class="btn slectedButton selectBtn-6">Select</button>
               </div>
             </div>
           </div>
@@ -111,10 +112,11 @@
             <!-- Selected - V -->
             <div class="selected-player">
               <h1>Selected - V</h1>
-              <div>
-                <ul>
-                  <li class="player-num"><span>1.</span> Farhad</li>
-                </ul>
+
+              <div id="select-player">
+                <ul class="slectedItem"></ul>
+
+                <p>No player selected yet!</p>
               </div>
             </div>
             <!-- Selected - V end -->
@@ -132,9 +134,9 @@
                       <input id="perPlayer" type="number" />
                     </div>
 
-                    <button class="btn">Calculate</button>
+                    <a class="btn expensesCal">Calculate</a>
                     <div class="player-expenses">
-                      Player Expenses: <span>$5000</span>
+                      Player Expenses: <span id="expenses">$0</span>
                     </div>
                   </form>
                 </div>
@@ -151,10 +153,10 @@
                       <label for="coach">Coach</label>
                       <input id="coach" type="number" />
                     </div>
-                    <button class="btn">Calculate Total</button>
+                    <a class="btn totalBtn">Calculate Total</a>
                   </form>
 
-                  <div class="total">Total <span>$5000</span></div>
+                  <div class="total">Total <span id="totalCost">$0</span></div>
                 </div>
               </div>
             </div>
