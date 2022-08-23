@@ -1,4 +1,5 @@
 const slectedButtons = document.querySelectorAll(".slectedButton");
+console.log(slectedButtons);
 const slectedItem = document.querySelector(".slectedItem");
 const noPlayer = document.querySelector(".noPlayer");
 
@@ -9,6 +10,9 @@ const playersNames = [
   "Miroslav Klose",
   "Nadine Angerer",
   "Hope Solo",
+  "Iker Casillas",
+  "Gianluigi Buffon",
+  "Andrea Pirlo",
 ];
 
 const perPlayer = document.getElementById("perPlayer");
@@ -54,11 +58,9 @@ totalBtn.addEventListener("click", function () {
 
 slectedButtons.forEach((slectedButton) => {
   function selctedUl(liIndex) {
-
     const listItem = document.createElement("li");
     listItem.textContent = playersNames[liIndex];
 
-    
     playerNameList.push(listItem.textContent);
 
     slectedItem.appendChild(listItem);
@@ -71,7 +73,7 @@ slectedButtons.forEach((slectedButton) => {
     } else {
       slectedButton.setAttribute("disabled", "");
       slectedButton.style.background = "gray";
-      noPlayer.style.display = 'none'
+      noPlayer.style.display = "none";
     }
   }
 
@@ -88,6 +90,12 @@ slectedButtons.forEach((slectedButton) => {
       selctedUl(4);
     } else if (e.target.classList[2] == "selectBtn-6") {
       selctedUl(5);
+    } else if (e.target.classList[2] == "selectBtn-7") {
+      selctedUl(6);
+    } else if (e.target.classList[2] == "selectBtn-8") {
+      selctedUl(7);
+    } else if (e.target.classList[2] == "selectBtn-9") {
+      selctedUl(8);
     }
   });
 });
