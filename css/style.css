@@ -30,6 +30,7 @@ input {
   padding: 0.8rem;
   font-size: 1rem;
   cursor: pointer;
+  text-align: center;
 }
 .container {
   width: 100%;
@@ -93,11 +94,13 @@ main {
 .player h1 {
   color: #fff;
   font-weight: 500;
+  margin-top: 1rem;
 }
 
 .player p {
   color: #b3b3b3;
-  margin: 1rem;
+  top: 1rem;
+  position: relative;
 }
 .player-num {
   font-weight: 500;
@@ -119,11 +122,16 @@ ul.slectedItem li {
 .playerItem {
   display: none;
 }
+.slectedButton {
+  margin-top: 3rem;
+}
 div#select-player p {
   color: #606060;
   text-align: center;
   font-weight: bold;
   font-size: 0.9rem;
+  position: relative;
+  top: 3.3rem;
 }
 /* Player section end */
 
@@ -144,7 +152,8 @@ div#select-player p {
 .selected-player {
   background: #0d0d0d;
   color: #fff;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
+  height: 258px;
 }
 
 .selected-player h1 {
