@@ -39,7 +39,8 @@ input {
 }
 /* Hero senction */
 #hero {
-  background-image: url(../img/hero-image.avif);
+  background-image: url(../img/hero.png);
+  background-color: #000;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,6 +49,22 @@ input {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  position: relative;
+}
+.hero-1 {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+}
+
+.hero-1 img {
+  width: 90%;
+}
+.soccer-goal {
+  position: absolute;
+  right: 0px;
+  bottom: -37px;
+  z-index: 99;
 }
 .main-content {
   display: flex;
@@ -58,9 +75,170 @@ input {
 .hero-content h1 {
   font-family: "Berkshire Swash", cursive;
   font-size: 3rem;
+  color: #FF5E19;
 }
 .hero-content p {
   font-weight: 600;
+  color: #fff;
+}
+/* Hero senction end */
+
+/* Player section */
+main {
+  background-color: #151515;
+}
+.main-content {
+  width: 100%;
+  padding: 4rem 0;
+}
+.player-content {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.calculations {
+  width: 25%;
+  padding-left: 1rem;
+}
+.player {
+  text-align: center;
+  width: 22rem;
+  border: 1px solid #434343;
+  flex-grow: 1;
+  background-color: #0d0d0d;
+  padding: 1rem;
+}
+.player h1 {
+  color: #fff;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.player p {
+  color: #b3b3b3;
+  top: 1rem;
+  position: relative;
+}
+.player-num {
+  font-weight: 500;
+}
+ol.slectedItem li::marker {
+  color: #888;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+ol.slectedItem li {
+  padding-left: 1rem;
+}
+ul.slectedItem li {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  align-items: center;
+}
+.playerItem {
+  display: none;
+}
+.slectedButton {
+  margin-top: 3rem;
+}
+div#select-player p {
+  color: #606060;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  position: relative;
+  top: 3.3rem;
+}
+/* font-family: 'Berkshire Swash', cursive;
+font-family: 'Manrope', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@400;500;600;700&display=swap");
+
+/* Default Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+input {
+  color: #fff;
+}
+.btn {
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  background: #015196;
+  color: #fff;
+  padding: 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+.container {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+/* Hero senction */
+#hero {
+  background-image: url(../img/hero.png);
+  background-color: #000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  position: relative;
+}
+.hero-container {
+  width: 860px;
+  margin: 0 auto;
+}
+.hero-1 {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+}
+
+.hero-1 img {
+  width: 90%;
+}
+.soccer-goal {
+  position: absolute;
+  right: 0px;
+  bottom: -37px;
+  z-index: 99;
+}
+.main-content {
+  display: flex;
+}
+.hero-content {
+  text-align: center;
+}
+.hero-content h1 {
+  font-family: "Berkshire Swash", cursive;
+  font-size: 3rem;
+  color: #FF5E19;
+}
+.hero-content p {
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.88;
 }
 /* Hero senction end */
 
@@ -162,6 +340,90 @@ div#select-player p {
   margin-bottom: 1rem;
 }
 
+.budget {
+  background: #0d0d0d;
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  border: 1px solid #434343;
+}
+
+.budget h1 {
+  font-weight: 500;
+  text-align: center;
+}
+
+.budget > div {
+  padding: 1rem 2rem;
+  display: grid;
+  gap: 1rem;
+}
+.calculate-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+.soccer-voerly {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+}
+input#perPlayer,
+#manager,
+#coach {
+  padding: 1rem;
+  border: 1px solid #fff;
+  background: none;
+  width: 9rem;
+}
+.player-expenses,
+.total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+/* Calculate section end */
+
+/* Player section end */
+
+/* Calculate section */
+.selected-player > div {
+  padding: 1rem 2rem;
+}
+.selected-player {
+  background: #0d0d0d;
+  color: #fff;
+  border: 1px solid #434343;
+}
+
+.selected-player h1 {
+  font-weight: 500;
+  text-align: center;
+}
+.selected-player {
+  background: #0d0d0d;
+  color: #fff;
+  padding: 1rem 2rem;
+  height: 258px;
+}
+
+.selected-player h1 {
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1::after {
+  content:
+  url('../img/Line-Marker.png'); /* with class ModalCarrot ??*/
+  position:
+  relative; /*or absolute*/
+  z-index:100000; /*a number that's more than the modal box*/
+  left: 21rem;
+  /* top:10px; */
+}
 .budget {
   background: #0d0d0d;
   color: #fff;
