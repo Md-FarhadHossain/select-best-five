@@ -29,14 +29,20 @@ const totalPlayerExpenses = [];
 
 const perPlayerValues = parseInt(perPlayer.value);
 const playerExpensess = perPlayerValues * playerNameList.length;
-console.log(playerExpensess)
+console.log(playerExpensess);
 
+expensesCal.addEventListener("click", function () {
+  const perPlayerValue = parseInt(perPlayer.value);
+  // if (perPlayer.value == ''){
+  //   alert('Please prvide a valid cost!💸')
+  // }
+  const playerExpenses = perPlayerValue * playerNameList.length;
+  totalPlayerExpenses.push(playerExpenses);
+  expenses.innerText = "$" + playerExpenses;
 
-expensesCal.addEventListener("click",function(){
-    const perPlayerValue = parseInt(perPlayer.value);
-    const playerExpenses = perPlayerValue * playerNameList.length;
-    totalPlayerExpenses.push(playerExpenses);
-    expenses.innerText = "$" + playerExpenses;
+  // if (isNaN(expenses)) {
+  //   expenses.innerText = "$0";
+  // }
 });
 
 totalBtn.addEventListener("click", function () {
@@ -46,18 +52,25 @@ totalBtn.addEventListener("click", function () {
   const managerCoachExpense = managerValue + coachValue;
 
   const tpeIn = totalPlayerExpenses.length - 1;
-  const totalExpenses = parseInt(totalPlayerExpenses[tpeIn]) + managerCoachExpense;
+  const totalExpenses =
+    parseInt(totalPlayerExpenses[tpeIn]) + managerCoachExpense;
 
   totalCost.innerText = "$" + totalExpenses;
   console.log(totalExpenses);
+
+  // if (isNaN(totalCost)){
+  //   totalCost.innerText = "$0"
+  // }
+  // if (manager.value == '' || coach.value == ''){
+  //   alert('Please prvide a valid cost!💸')
+  // }
 });
 
+let itemListOfPlayer = [];
+console.log(itemListOfPlayer);
 
-let itemListOfPlayer = []
-console.log(itemListOfPlayer)
-
-if (itemListOfPlayer.length > 5){
-  itemListOfPlayer.length - 1
+if (itemListOfPlayer.length > 5) {
+  itemListOfPlayer.length - 1;
 }
 
 slectedButtons.forEach((slectedButton) => {
@@ -70,22 +83,21 @@ slectedButtons.forEach((slectedButton) => {
     // slectedItem.appendChild(listItem);
 
     const slectedItemLis = document.querySelectorAll(".slectedItem li");
-    console.log(slectedItemLis)
-    itemListOfPlayer.push(slectedItemLis)
+    console.log(slectedItemLis);
+    itemListOfPlayer.push(slectedItemLis);
 
     if (slectedItemLis.length >= 5) {
-
       alert("You cannot add more than 5 player!");
-
     } else {
       slectedButton.setAttribute("disabled", "");
       slectedButton.style.background = "gray";
+      slectedButton.style.cursor = "no-drop";
       noPlayer.style.display = "none";
       const listItem = document.createElement("li");
       listItem.textContent = playersNames[liIndex];
-  
+
       playerNameList.push(listItem.textContent);
-  
+
       slectedItem.appendChild(listItem);
     }
   }
