@@ -1,5 +1,4 @@
 const slectedButtons = document.querySelectorAll(".slectedButton");
-console.log(slectedButtons);
 const slectedItem = document.querySelector(".slectedItem");
 const noPlayer = document.querySelector(".noPlayer");
 
@@ -26,21 +25,19 @@ const totalBtn = document.querySelector(".totalBtn");
 const playerNameList = [];
 const totalPlayerExpenses = [];
 
-console.log(totalPlayerExpenses);
+// console.log(totalPlayerExpenses);
 
 const perPlayerValues = parseInt(perPlayer.value);
 const playerExpensess = perPlayerValues * playerNameList.length;
+console.log(playerExpensess)
 
-console.log(playerExpensess);
 
-function hello() {
-  const perPlayerValue = parseInt(perPlayer.value);
-  const playerExpenses = perPlayerValue * playerNameList.length;
-  totalPlayerExpenses.push(playerExpenses);
-  expenses.innerText = "$" + playerExpenses;
-}
-
-expensesCal.addEventListener("click", hello);
+expensesCal.addEventListener("click",function(){
+    const perPlayerValue = parseInt(perPlayer.value);
+    const playerExpenses = perPlayerValue * playerNameList.length;
+    totalPlayerExpenses.push(playerExpenses);
+    expenses.innerText = "$" + playerExpenses;
+});
 
 totalBtn.addEventListener("click", function () {
   const managerValue = parseInt(manager.value);
@@ -49,31 +46,47 @@ totalBtn.addEventListener("click", function () {
   const managerCoachExpense = managerValue + coachValue;
 
   const tpeIn = totalPlayerExpenses.length - 1;
-  const totalExpenses =
-    parseInt(totalPlayerExpenses[tpeIn]) + managerCoachExpense;
+  const totalExpenses = parseInt(totalPlayerExpenses[tpeIn]) + managerCoachExpense;
 
   totalCost.innerText = "$" + totalExpenses;
   console.log(totalExpenses);
 });
 
+
+let itemListOfPlayer = []
+console.log(itemListOfPlayer)
+
+if (itemListOfPlayer.length > 5){
+  itemListOfPlayer.length - 1
+}
+
 slectedButtons.forEach((slectedButton) => {
   function selctedUl(liIndex) {
-    const listItem = document.createElement("li");
-    listItem.textContent = playersNames[liIndex];
+    // const listItem = document.createElement("li");
+    // listItem.textContent = playersNames[liIndex];
 
-    playerNameList.push(listItem.textContent);
+    // playerNameList.push(listItem.textContent);
 
-    slectedItem.appendChild(listItem);
+    // slectedItem.appendChild(listItem);
 
     const slectedItemLis = document.querySelectorAll(".slectedItem li");
+    console.log(slectedItemLis)
+    itemListOfPlayer.push(slectedItemLis)
 
-    if (slectedItemLis.length > 5) {
-      slectedItem.removeChild(listItem);
+    if (slectedItemLis.length >= 5) {
+
       alert("You cannot add more than 5 player!");
+
     } else {
       slectedButton.setAttribute("disabled", "");
       slectedButton.style.background = "gray";
       noPlayer.style.display = "none";
+      const listItem = document.createElement("li");
+      listItem.textContent = playersNames[liIndex];
+  
+      playerNameList.push(listItem.textContent);
+  
+      slectedItem.appendChild(listItem);
     }
   }
 
