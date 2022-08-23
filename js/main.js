@@ -1,5 +1,6 @@
 const slectedButtons = document.querySelectorAll(".slectedButton");
 const slectedItem = document.querySelector(".slectedItem");
+const noPlayer = document.querySelector(".noPlayer");
 
 const playersNames = [
   "Lionel Messi",
@@ -53,21 +54,24 @@ totalBtn.addEventListener("click", function () {
 
 slectedButtons.forEach((slectedButton) => {
   function selctedUl(liIndex) {
-    const li = document.createElement("li");
-    li.textContent = playersNames[liIndex];
 
-    playerNameList.push(li.textContent);
+    const listItem = document.createElement("li");
+    listItem.textContent = playersNames[liIndex];
 
-    slectedItem.appendChild(li);
+    
+    playerNameList.push(listItem.textContent);
+
+    slectedItem.appendChild(listItem);
 
     const slectedItemLis = document.querySelectorAll(".slectedItem li");
 
     if (slectedItemLis.length > 5) {
-      slectedItem.removeChild(li);
+      slectedItem.removeChild(listItem);
       alert("You cannot add more than 5 player!");
     } else {
       slectedButton.setAttribute("disabled", "");
       slectedButton.style.background = "gray";
+      noPlayer.style.display = 'none'
     }
   }
 

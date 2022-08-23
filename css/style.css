@@ -102,14 +102,19 @@ main {
 .player-num {
   font-weight: 500;
 }
-.player-num strong {
-  font-weight: bold;
-
+ol.slectedItem li::marker {
   color: #888;
-
+  font-weight: bold;
   font-size: 1.3rem;
-
-  margin-right: 1.2rem;
+}
+ol.slectedItem li {
+  padding-left: 1rem;
+}
+ul.slectedItem li {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  align-items: center;
 }
 .playerItem {
   display: none;
